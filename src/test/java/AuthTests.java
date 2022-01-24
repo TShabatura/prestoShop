@@ -1,3 +1,4 @@
+import com.codeborne.selenide.Configuration;
 import org.apache.commons.lang.RandomStringUtils;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -10,6 +11,7 @@ public class AuthTests {
 
     @BeforeClass
     public void setup() {
+        Configuration.browser = "firefox";
         email = RandomStringUtils.randomAlphanumeric(10) + "@ukr.net";
     }
 
